@@ -18,13 +18,12 @@ Input >> Output Examples
 
 """
 
+from itertools import count
+
 
 def minimum_number(numbers):
-    number_to_insert = 0
-    while True:
-        if is_prime(sum(numbers) + number_to_insert):
-            return number_to_insert
-        number_to_insert += 1
+    s = sum(numbers)
+    return next(x for x in count(0) if is_prime(s + x))
 
 
 def is_prime(number):

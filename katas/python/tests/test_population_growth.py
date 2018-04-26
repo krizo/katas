@@ -1,4 +1,4 @@
-from katas.python.population_growth import nb_year
+from katas.python.kyu6.population_growth import nb_year
 import pytest
 
 @pytest.fixture

@@ -1,4 +1,4 @@
-from katas.python.credit_card_vendor import *
+from katas.python.kyu7.credit_card_vendor import *
 import pytest
 
 

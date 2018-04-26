@@ -1,5 +1,5 @@
 import pytest
-from katas.python.find_divisiors import divisors
+from katas.python.kyu6.find_divisiors import divisors
 
 
 @pytest.fixture

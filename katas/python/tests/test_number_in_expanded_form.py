@@ -1,5 +1,5 @@
 import pytest
-from katas.python.number_in_expanded_form import *
+from katas.python.kyu6.number_in_expanded_form import *
 
 
 @pytest.fixture

@@ -17,19 +17,10 @@ Input >> Output Examples
 1- minimumNumber ({3,1,2}) ==> return (1)
 """
 require 'spec_helper'
+require 'prime'
 
 def minimum_number(numbers)
-  sum = numbers.inject(&:+)
-  0.step do |n|
-    return n if is_prime(sum + n)
-  end
-end
-
-
-def is_prime(number)
-  return false if number % 2 == 0 && number > 2
-  for i in (3..number - 1) do
-    return false if number % i == 0
-  end
-  true
+  sum = numbers.reduce(0, :+)
+  #sum = numbers.sum  <- ruby 2.4+
+  Prime.find { |prime| prime >= sum } - sum
 end

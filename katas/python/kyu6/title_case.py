@@ -16,8 +16,6 @@ title_case('the quick brown fox') # should return: 'The Quick Brown Fox'
 
 
 def title_case(title, minor_words=''):
-    ignored_words = [w.lower() for w in minor_words.split(' ')]
-    fixed_words = [word.capitalize() if word.lower() not in ignored_words else word.lower() for word in
-                   title.split(' ')]
-    fixed_words[0] = fixed_words[0].capitalize()
-    return " ".join(fixed_words)
+    minor_words = minor_words.lower().split()
+    title = title.capitalize().split()
+    return " ".join([word if word in minor_words else word.capitalize() for word in title ])

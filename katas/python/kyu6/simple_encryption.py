@@ -22,6 +22,9 @@ from itertools import chain, zip_longest
 
 
 def decrypt(encrypted_text, n):
+    if encrypted_text is None or encrypted_text == "":
+        return encrypted_text
+
     half_of_string = int(len(encrypted_text) / 2)
 
     for i in range(0, n):
@@ -32,6 +35,9 @@ def decrypt(encrypted_text, n):
 
 
 def encrypt(text, n):
+    if text is None or text == "":
+        return text
+
     for i in range(0, n):
         text = text[1::2] + text[::2]
     return text

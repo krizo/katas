@@ -21,8 +21,8 @@ class TestSimpleEncryption(TestCase):
         self.assertEqual(decrypt("This is a test!", -1), "This is a test!")
         self.assertEqual(decrypt("hskt svr neetn!Ti aai eyitrsig", 1), "This kata is very interesting!")
 
-    # def test_edge_cases(self):
-    #     self.assertEqual(encrypt("", 0), "")
-    #     self.assertEqual(decrypt("", 0), "")
-    #     self.assertEqual(encrypt(None, 0), None)
-    #     self.assertEqual(decrypt(None, 0), None)
+    def test_edge_cases(self):
+        self.assertEqual(encrypt("", 0), "")
+        self.assertEqual(decrypt("", 0), "")
+        self.assertEqual(encrypt(None, 0), None)
+        self.assertEqual(decrypt(None, 0), None)

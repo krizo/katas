@@ -18,7 +18,7 @@ If the input-string is null or empty return exactly this value!
 If n is <= 0 then return the input text.
 """
 
-from itertools import chain
+from itertools import chain, zip_longest
 
 
 def decrypt(encrypted_text, n):
@@ -26,8 +26,8 @@ def decrypt(encrypted_text, n):
 
     for i in range(0, n):
         first_half, second_half = encrypted_text[:half_of_string], encrypted_text[half_of_string:]
-        merged = list(zip(second_half, first_half))
-        encrypted_text = ''.join(list(chain.from_iterable(merged)))
+        merged = [e for e in list(chain.from_iterable(zip_longest(second_half, first_half))) if e is not None]
+        encrypted_text = ''.join(merged)
     return encrypted_text
 
 

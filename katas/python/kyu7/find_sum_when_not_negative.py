@@ -11,4 +11,4 @@ find_sum();        # returns 0
 
 
 def find_sum(*args):
-    return -1 if any(x < 0 for x in args) else int(sum(x for x in args))
+    return -1 if any(x < 0 for x in args) else sum(args)

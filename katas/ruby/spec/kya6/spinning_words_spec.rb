@@ -1,6 +1,6 @@
 require './kyu6/spinning_words'
 
-describe "Reverse the number" do
+describe "Spin words" do
   let(:test_inputs) do
     [
       {

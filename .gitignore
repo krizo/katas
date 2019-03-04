@@ -6,3 +6,5 @@ __pycache__/
 .bundle
 .cache
 .vscode/
+node_modules
+.DS_STore
